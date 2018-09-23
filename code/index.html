@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Sprint 2: Pizzabot</title>
-    <script src="./pizzabot.js" charset="utf-8"></script>
+    <title>Adam's visual PizzaBot!</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   </head>
   <body>
-    Edit pizzabot.js to complete this assignment.
+    <div class="outer-container">
+
+      <h1 id="title">PIZZA BOT</h1>
+      <div class="pizzabot-container">
+        <div id="speachBalloon">
+          <img src="speach-balloon.png" alt="Pizza chef">
+          <img src="pizzaman-transbg.png" alt="Pizza chef" id="pizzaMan">
+          <div id="textBox">
+          </div>
+        </div>
+      </div>
+      <div class="answer-container">
+        <input type="text" name="answerText" value="Vegetarian Pizza" id="answerText">
+        <input type="button" name="answerButton" value="Answer" id="answerButton">
+      </div>
+
+    </div>
   </body>
+  <script type="text/javascript" src="./script.js"></script>
 </html>

@@ -1,0 +1,74 @@
+body {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  background-color: pink;
+}
+.outer-container {
+  display: flex;
+  flex-direction: column;
+}
+.pizzabot-container {
+  display: flex;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.answer-container {
+  display: flex;
+  width: 50%;
+  min-width: 500px;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+.answer-container #answerText {
+  width: 50%;
+  padding: 10px;
+  box-shadow: 5px 10px 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  z-index: 10;
+}
+.answer-container #answerButton {
+  border: none;
+  margin-left: 10px;
+  width: 100px;
+  height: auto;
+  box-shadow: 5px 10px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-size: 16px;
+
+}
+#title {
+  margin-top: 2%;
+  text-align: center;
+  font-size: 60px;
+}
+#speachBalloon {
+  position: relative;
+}
+#speachBalloon img {
+  width: 500px;
+}
+#textBox {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  width: 370px;
+  height: 210px;
+}
+#pizzaMan {
+  position: absolute;
+  bottom: -190px;
+  left: -210px;
+}
+
+@media (max-width: 922px) {
+  #pizzaMan {
+    display: none;
+  }
+  .answer-container #answerText {
+    width: 100%;
+  }
+}
