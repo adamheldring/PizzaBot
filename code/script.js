@@ -10,7 +10,6 @@ let orderName
 let orderQuantity
 let pizzaOnTheMenu = false
 let timeForQuantity = false
-let quantityChecked = false
 let orderFinalized = false
 let clicksAfterFinal = -1
 
@@ -71,13 +70,11 @@ const clickHandler = () => {
   }
 
   //Updates question to how many, if ordered pizza is on the menu
-  if (timeForQuantity && !quantityChecked) {
-    console.log('ordering number of pizzas')
+  if (timeForQuantity) {
     if (isNaN(answer)) {
       balloonText.innerHTML = `Sorry, "${answer}" is not a number. How many of ${orderName} do you want?`
     } else {
       //Finalizes order when quantity is checked and is a number
-      quantityIsNumber = true
       orderQuantity = answer
       const orderTotal = totalCost(orderQuantity)
       calcCookingTime()
