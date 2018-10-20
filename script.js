@@ -46,7 +46,6 @@ const calcCookingTime = () => {
   }
 }
 
-
 //STARTS PROGRAM SEQUENCE
 
 balloonText.innerHTML = `Hey!<br> Happy to serve your pizza. On our menu we have ` +
@@ -71,7 +70,7 @@ const clickHandler = () => {
 
   //Updates question to how many, if ordered pizza is on the menu
   if (timeForQuantity) {
-    if (isNaN(answer)) {
+    if (isNaN(answer) || !answer) {
       balloonText.innerHTML = `Sorry, "${answer}" is not a number. How many of ${orderName} do you want?`
     } else {
       //Finalizes order when quantity is checked and is a number
@@ -81,6 +80,7 @@ const clickHandler = () => {
       balloonText.innerHTML = `Great! <br> I'll get started on your ${orderName} right away. <br><br>` +
                               `It will cost ${orderTotal}kr. The pizzas will take ${cookingTime} minutes.`
       orderFinalized = true;
+      answerText.value = ""
       button.value = "HURRY!"
     }
   }
@@ -96,9 +96,9 @@ const clickHandler = () => {
     if (clicksAfterFinal == 1) {
         balloonText.innerHTML = `I'm cooking your pizzas, you can pick them up in ${cookingTime} minutes.`
         button.style.color = "rgb(255,0,0)"
-    } else if (clicksAfterFinal > 1 && clicksAfterFinal < 5){
+    } else if (clicksAfterFinal > 1 && clicksAfterFinal < 4){
         balloonText.innerHTML = `You have asked me ${clicksAfterFinal} times now! Still ${cookingTime} minutes to go!`
-    } else if (clicksAfterFinal >= 5){
+    } else if (clicksAfterFinal >= 4){
         balloonText.innerHTML = `No pizza for you! <br><br> Don't come back!`
     }
   }
